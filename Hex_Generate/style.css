@@ -1,0 +1,52 @@
+body{
+	background-color: gray;
+}
+
+.hex_box{
+	height: 210px;
+	width: 400px;
+	position:absolute;
+	margin: 150px 430px 150px 430px;
+	background-color: #709A36;
+	border: 1px white;
+	border-style: dashed;
+}
+
+.generate_color{
+	height: 60px;
+	width: 220px;
+	background-color: black;
+	font-family: sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 90px;
+	margin-top: 20px;
+	cursor: pointer;
+	border-radius: 25px;
+}
+
+.curr_box{
+	height: 45px;
+	width: 85px;
+	margin-left: 155px;
+	border: 1px white;
+	border-style: dashed;
+	text-align: center;
+}
+
+#top_text{
+	color:  white;
+	font-family: sans-serif;
+	margin-left: 75px;
+}
+
+#current_color{
+	color:  white;
+	font-family: sans-serif;
+}
+
+.gen_col
+{
+	color:white;
+}
