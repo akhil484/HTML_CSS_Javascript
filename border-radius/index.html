@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Count Words</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="parent">
+        <div class="box"></div>
+        <div class="rangeBar">
+            <input id="range_id" type="range" min="0" max="100" value="0" oninput=changeValue()>
+            <p id="rangeValue">0</p>
+        </div>
+    </section>
+    </body>
+    <script>
+        function changeValue()
+        {
+            var range_ele = document.getElementById('range_id').value;
+            rangeValue.innerText = range_ele;
+            document.getElementsByClassName('box')[0].style.borderRadius = range_ele+"px";
+        }
+    </script>
+</html>
