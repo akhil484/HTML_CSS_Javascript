@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Expand Elements</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="parent">
+            <div class="box red"></div>
+            <div class="box blueviolet"></div>
+            <div class="box green"></div>
+            <div class="box blue"></div>
+            <div class="box orange"></div>
+            <div class="box purple"></div>
+        </section>
+    </body>
+
+    <script>
+
+let allboxes = document.querySelectorAll('.box');
+
+function removeactiveClass(){
+    for(var i=0;i<allboxes.length;i++)
+    {
+    
+        allboxes[i].classList.remove('active');
+    
+    }
+}
+for(var i=0;i<allboxes.length;i++)
+{
+    allboxes[i].addEventListener('click', function(){
+        removeactiveClass();
+        this.classList.add('active');
+    })
+}
+
+    </script>
+</html>

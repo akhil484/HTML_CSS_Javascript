@@ -1,0 +1,44 @@
+.box{
+    width: 20px;
+    height: 174px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: width 0.9s;
+}
+.parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:210px;
+}
+.parent > div{
+    margin:10px;
+}
+
+.red{
+    background-color: red;
+}
+
+.blueviolet{
+    background-color: blueviolet;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.purple{
+    background-color: purple;
+}
+
+.active{
+    width: 150px;
+}
