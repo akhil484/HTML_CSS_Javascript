@@ -5,6 +5,22 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="box"></div>
+        <div class="box">
+            <p>No of Characters: <span class="chars_no">0</span></p>
+            <textarea id="counttext" rows="10" cols="80"></textarea>
+        </div>
     </body>
+    <script>
+        var textbox = document.querySelector('textarea');
+        textbox.addEventListener('input',function(){
+            var no_of_chars = document.getElementById('counttext').value;
+            console.log(no_of_chars.length);
+            document.getElementsByClassName("chars_no")[0].textContent = no_of_chars.length;
+            if(no_of_chars.length>=200)
+            {
+                document.getElementById('counttext').disabled = true;
+            }
+            
+        });
+    </script>
 </html>
