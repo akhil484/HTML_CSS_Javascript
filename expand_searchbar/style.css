@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 210px;
+}
+
+.searchtxt{
+    border-radius: 10px;
+    width: 200px;
+    height: 20px;
+    border-color: turquoise;
+    opacity: 1;
+    transition: width 0.4s ease;
+}
+
+.btn{
+    margin-left: 5px;
+    height: 26px;
+    border-color: turquoise;
+    border-radius: 10px;
+}
