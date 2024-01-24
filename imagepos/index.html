@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Position Slider</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="image"></div>
+        </div>
+        <div class="rangebar">
+            <label for="x-axis">Horizontal<br>
+                <input class="horizontal" type="range" min="-180" max="180" value="0">
+            </label>
+            <label for="x-axis"><br>Vertical<br>
+                <input class="vertical" type="range" min="-180" max="180" value="0">
+            </label>
+        </div>
+    </body>
+
+    <script>
+        var bar = document.getElementsByClassName('horizontal')[0];
+        var verticalbar = document.getElementsByClassName('vertical')[0];
+        var img = document.querySelector('.image');
+        bar.addEventListener('input', function(){
+            img.style.left = bar.value+"px";
+        });
+
+        verticalbar.addEventListener('input', function(){
+            img.style.top = verticalbar.value+"px";
+        });
+    </script>
+</html>
