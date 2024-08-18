@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+            Clock
+        </title>
+
+        <style>
+            .clock {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 90%;
+                margin: 0;
+            }
+            .time-font {
+                font-size: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <div class="clock">
+           <span id="hour" class="time-font">HH</span><span class="time-font">:</span><span id="min" class="time-font">MM</span><span class="time-font"><span class="time-font">:</span></span><span id="sec" class="time-font">SS</span>
+
+        </div>
+        <div></div>
+    </body>
+    <script>
+        let counter = 0;
+
+function increase_counter() {
+    const now = new Date();
+    let hours = String(now.getHours()).padStart(2, '0');
+    let minutes = String(now.getMinutes()).padStart(2, '0');
+    let seconds = String(now.getSeconds()).padStart(2, '0');
+
+    document.getElementById("hour").textContent = hours;
+    document.getElementById("min").textContent = minutes;
+    document.getElementById("sec").textContent = seconds;
+
+}
+setInterval(increase_counter, 1000);
+
+
+    </script>
+</html>
