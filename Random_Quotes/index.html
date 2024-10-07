@@ -13,13 +13,39 @@
         <p id="quote">Embrace the beauty around us.</p>
     </div>
     
-    <a class="generate-btn" onclick="getquote()">Get Quote</a>
+    <a class="generate-btn" id="get-btn" onclick="getquote()">Get Quote</a>
 </div>
-
+<input type="checkbox" id="checkbox1" onclick="changeMode()">
 </body>
 
 <script>
-    let quote_category = ['dreams', 'happiness', 'fitness', 'friendship', 'god', 'hope']
+    let quote_category = ['dreams', 'happiness', 'fitness', 'friendship', 'god', 'hope'];
+
+    function changeMode()
+    {
+        let checkbox = document.getElementById('checkbox1');
+        let ele = document.getElementById('quote');
+        let p_box = document.getElementById('para_box');
+        let a_btn = document.getElementById('get-btn');
+
+        //checked means dark mode
+        if (checkbox.checked == true){
+            document.body.style.backgroundColor= '#282626';
+            ele.style.color= 'white';
+            p_box.classList.toggle("new-bg");
+            a_btn.classList.remove('generate-btn')
+            a_btn.classList.add("generate-btn-dark");
+            
+        } 
+        else {
+            document.body.style.backgroundColor= '#faf8f8';
+            ele.style.color= 'black';
+            p_box.classList.toggle("new-bg");
+            a_btn.classList.remove('generate-btn-dark')
+            a_btn.classList.add("generate-btn");
+        }
+    }
+
     async function getquote() {
         let index = Math.floor(Math.random() * 6);
         let category = quote_category[index];
@@ -34,7 +60,7 @@
             const response = await fetch(url, {
                 method: "GET",
                 headers: {
-                    'X-Api-Key': '',
+                    'X-Api-Key': '3vt9MwEBNjrdDYaaJ/9wFA==1GXTyLjO5mSJ8PIf',
                     "Content-Type": "application/json",
                 }
 
