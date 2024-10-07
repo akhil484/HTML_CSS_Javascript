@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #faf8f8;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #para_box{
+    width: 550px;
+    height: 100px;
+    border:2px solid #c25725;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+  }
+  .content {
+    text-align: center;
+    max-width: 550px;
+  }
+
+  p#quote {
+    padding: 14px;
+    font-family: Georgia, serif;
+    position: relative;
+    z-index: 1;
+}
+.generate-btn{
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    display: block;
+    width: 107px;
+    height: 25px;
+    text-align: center;
+    border: 1px solid #3498db;
+    border-radius: 15px;
+    margin-left: 220px;
+    margin-top: 35px;
+    text-align: center;
+    font-family: Georgia, serif;
+    padding: 7px;
+    transition: background-color 0.3s ease;
+}
+.generate-btn:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.blur-content{
+    filter: blur(3px);
+}
+
+.Broader_Animation{
+    position: relative;
+    overflow: hidden;
+    width: 550px;
+    height: 100px;
+}
+
+ .Broader_Animation::before{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 0px;
+  content: '';
+  background: #c25725;
+  animation: sec 3000ms infinite;
+  border-radius: 15px;
+}
+
+.Broader_Animation::after {
+  content: '';
+  position: absolute;
+  background: #faf8f8;
+  inset: 1px;
+  border-radius: 10px;
+}
+
+@keyframes sec {
+  from {
+    width: 0;
+  }
+  
+  to {
+    width: 100%;
+  }
+}
