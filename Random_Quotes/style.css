@@ -123,3 +123,37 @@ html, body {
 .new-bg::after {
     background: #282626;
 }
+
+.toggle{
+    display: block;
+    height: 32px;
+    width: 125px;
+    background-color: #e7e7e7;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+.toggle_ball{
+    display: block;
+    height: 32px;
+    width: 32px;
+    background-color: white;
+    border-radius: 30px;
+    transition: transform 0.5s ease;
+}
+.float_ball{
+    transform: translateX(95px);
+    
+}
+.toggle_dark{
+    background-color: black;
+}
+.image-sty {
+    width: 100%;
+    height: auto;
+}
+
+.hide_image{
+    display: none;
+}
