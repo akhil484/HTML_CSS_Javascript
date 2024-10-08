@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="toggle">
+            <div class="toggle_ball">
+                <img src="sun1.png" class="image-sty" id="sun">
+                <img src="moon.png" class="image-sty hide_image" id="moon" style="display: none;">
+            </div>
+        </div>
 <div class="content">
     <div id="para_box">
         <p id="quote">Embrace the beauty around us.</p>
@@ -19,6 +25,28 @@
 </body>
 
 <script>
+
+    let toggle_div = document.getElementsByClassName('toggle')[0];
+        
+        
+        toggle_div.onclick = function() {
+            let toggle_ball = document.getElementsByClassName('toggle_ball')[0];
+            let sun = document.getElementById('sun');
+            let moon = document.getElementById('moon');
+
+            toggle_ball.classList.toggle('float_ball');
+            toggle_div.classList.toggle('toggle_dark');
+            sun.classList.toggle('hide_image');
+            if(moon.style.display === "none")
+            {
+                moon.style.display = "block";
+            }
+            else{
+                moon.style.display = "none";
+            }
+            
+        }
+    
     let quote_category = ['dreams', 'happiness', 'fitness', 'friendship', 'god', 'hope'];
 
     function changeMode()
